@@ -1,0 +1,270 @@
+*{
+    font-family: Arial;
+}
+
+body{
+    background: #ffffff !important;;
+
+}
+
+.carousel-item {
+    height: 80vh;
+    min-height: 300px;
+}
+
+.carousel-caption {
+    bottom: 200;
+    z-index: 2;
+}
+
+.carousel-caption h5{
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.carousel-caption p {
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.carousel-inner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    
+}
+
+.section-padding{
+    padding: 70px 0;
+}
+
+.navbar-nav a {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.navbar-dark .navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.w-100 {
+    height: 100vh;
+}
+
+.navbar-toggler {
+    padding: 1px 5px;
+    font-size: 18px;
+    line-height: 0.3;
+}
+
+.services .card-body i {
+    font-size: 50px;
+}
+
+.team .card-body {
+    font-size: 20px;
+}
+
+.sectionn{
+    color: #000000;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.about-text{
+    -webkit-font-smoothing: antialiased;
+  color: #333;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin: 0;
+}
+
+.about-text-2 {
+    -webkit-font-smoothing: antialiased;
+    color: #333;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.section-text{
+    -webkit-font-smoothing: antialiased;
+    color: #333;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.section-text-1{
+    -webkit-font-smoothing: antialiased;
+    color: #333;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin: 0;
+}
+
+.card-title{
+    -webkit-font-smoothing: antialiased;
+    color: #333;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.card-content{
+    -webkit-font-smoothing: antialiased;
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin: 0;
+}
+
+.cards{
+    -webkit-font-smoothing: antialiased;
+    color: #333;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.card-text{
+    -webkit-font-smoothing: antialiased;
+    color: #333;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin: 0;
+}
+
+
+.pie-pagina{
+    width: 100%;
+    background-color:  #151516;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #dadee2;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: aqua;
+}
+.pie-pagina .grupo-2{
+    background-color: #151516;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+
+.android{
+    text-align: center;
+}
+
+
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}
+
+@media(max-width: 767px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .carousel-item {
+        height: 70vh;
+    }
+    .w-100 {
+        height: 70vh;
+    }
+    .carousel-caption {
+        bottom: 125px;
+    }
+    .carousel-caption h5 { 
+        font-size: 17pxs;
+    }
+    .carousel-caption a {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+    .carousel-caption p {
+        width: 100%;
+        line-height: 1.5;
+        font-size: 12px;
+    }
+    .about-text {
+        padding-top: 50px;
+    }
+    .card{
+        margin-bottom: 30px;
+    }
+    .section-padding {
+         padding: 50px 0;
+    }
+}

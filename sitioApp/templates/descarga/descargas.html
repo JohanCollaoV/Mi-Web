@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% load static %}
+
+<head>
+    <title> {% block titulo %} Descargas {% endblock %} </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link type="text/css" href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+
+{% block contenido %}
+
+<body>
+    <br>
+    <br>
+    <div class="container">
+        <p></p>
+        <div class="card text-center text-white bg-white" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
+            <div class="card-body">
+                <h4 class="sectionn" class="card-title text-dark"> Descargas </h4>
+                <table class="table table-white table-hover" >
+                    <thead>
+                        <tr>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Tamaño</th>
+                            <th scope="col">Descargar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Instalador apk</td>
+                            <td>19MB</td>
+                            <td>
+                                <a id="descargarLink" href="{% static '/download/app-debug.apk' %}"
+                                    class="btn btn-primary  " onclick="isMobile()" >Descargar archivo APK</a>
+                                <script>
+                                    // Función para detectar si el usuario está en un dispositivo móvil
+                                    function isMobile() {
+                                        return Android | webOS | iPhone | iPad | iPod | BlackBerry | IEMobile | Opera | Mini / i.test(navigator.userAgent);
+                                    }
+
+                                    // Obtén el enlace de descarga
+                                    var link = document.getElementById('descargarLink');
+
+                                    // URL de la APK
+                                    var apkUrl = 'sitioApp/static/download/app.rar';
+
+                                    // Configura el enlace de descarga según el tipo de dispositivo
+                                    if (isMobile()) {
+                                        link.addEventListener('click', function (event) {
+                                            event.preventDefault();
+                                            // Pregunta al usuario si desea instalar la APK
+                                            if (window.confirm('¿Quieres instalar la APK?')) {
+                                                window.location.href = apkUrl;
+                                            }
+                                        });
+                                    } else {
+                                        // Descarga normal en dispositivos no móviles
+                                        link.setAttribute('href', apkUrl);
+                                    }
+                                </script>
+                        </tr>
+                    </tbody>
+                    </thead>
+                </table>
+
+                <div class="row">
+                    <div class="col-12 cold-lg-3" data-aos="fade-up-right" data-aos-duration="1000">
+                        <div class="card text-center bg-white">
+                            <div class="card-body text-dark ">
+                                <img src="{% static 'img/smart-devices.png' %}" class="img-fluid" alt="">
+                                <p>
+                                <h3 class="card-title py-2">Una misma App, Asistencia en todas tus Asignaturas!</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+</body>
+
+{% endblock %}
